@@ -4,6 +4,7 @@ from ShapeClassifier import ShapeClassifierNetwork
 
 def test(img_path):
     labels = {0:'Circle', 1:'Rectangle', 2:'Square', 3:'Triangle', 4:'Star'}
+    # Model File
     model_file = "ShapeModels/model_weights.pth"
     model = ShapeClassifierNetwork(28*28,5)
     model.load_state_dict(torch.load(model_file))
